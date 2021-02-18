@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}test!{% endblock %}</title>
+    </head>
+    {% block body %}
+    <body>
+    <div class="track-page">
+            <div class="form__title">Set url</div>
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+            <div class="input-control input-control_track">
+                {{ form_widget(form.url, { 'attr': {'type':'text', 'name':'url', 'placeholder':'Set valid url', 'class':'required' } }) }}
+                <input class="btn btn_track track" type="submit" value="GO!">
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </body>
+    {% endblock %}
+</html>
